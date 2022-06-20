@@ -45,8 +45,8 @@ const ejecutarCodigo = () => {
       alt: "sala2",
     },
     {
-      src: "https://images.unsplash.com/photo-1654041562793-1bd2430585cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      url: "bosque",
+      url: "https://images.unsplash.com/photo-1654041562793-1bd2430585cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      alt: "bosque",
     },
     {
       url: "https://images.unsplash.com/photo-1654023316132-3665072d427b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
@@ -54,10 +54,12 @@ const ejecutarCodigo = () => {
     },
   ];
 
-  let svgs = document.getElementsByTagName("svg");
+  const svgs = document.getElementsByTagName("svg");
   console.log(svgs.length);
+
   for (let i = 1; i < svgs.length; i++) {
-    const img = document.createElement("img");
+    let img = document.createElement("img");
+
     img.setAttribute("src", urls[i - 1]["url"]);
     img.setAttribute("alt", urls[i - 1]["alt"]);
 
